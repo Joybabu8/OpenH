@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Video Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fab fa-instagram"></i> Instagram Video Downloader</h1>
+            <p>Download Instagram videos easily with our free tool</p>
+        </header>
+        
+        <main>
+            <div class="download-box">
+                <form id="download-form">
+                    <div class="input-group">
+                        <input type="text" id="instagram-url" placeholder="Paste Instagram video URL here..." required>
+                        <button type="submit" id="download-btn">Download</button>
+                    </div>
+                </form>
+                <div class="instructions">
+                    <h3>How to use:</h3>
+                    <ol>
+                        <li>Copy the URL of the Instagram video you want to download</li>
+                        <li>Paste the URL in the input field above</li>
+                        <li>Click the Download button</li>
+                        <li>Wait for the video to process</li>
+                        <li>Click the download link when it appears</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div id="result" class="result-container hidden">
+                <div class="loader hidden">
+                    <div class="spinner"></div>
+                    <p>Processing your video...</p>
+                </div>
+                <div class="video-preview hidden">
+                    <h3>Your video is ready!</h3>
+                    <div class="video-container">
+                        <video id="preview-video" controls></video>
+                    </div>
+                    <a id="download-link" class="download-button" href="#" download>
+                        <i class="fas fa-download"></i> Download Video
+                    </a>
+                </div>
+                <div class="error-message hidden">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p id="error-text"></p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Instagram Video Downloader | For educational purposes only</p>
+            <p class="disclaimer">This tool is not affiliated with Instagram or Meta Platforms, Inc.</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
