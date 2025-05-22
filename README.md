@@ -1,6 +1,6 @@
 # Instagram Video Downloader
 
-A simple web application that allows users to download videos from Instagram by providing the URL of the post.
+A simple web application that allows users to download videos from Instagram by providing the URL of the post. This tool is designed to be easy to use and efficient.
 
 ## Features
 
